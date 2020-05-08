@@ -1,0 +1,25 @@
+*{
+    font-family: 'Segoe UI';
+    background-color: #333945;
+    color: #EAF0F1;
+}
+#indicator{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 6px;
+    background-color: #DAE0E2;
+    z-index: 1;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+}
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+

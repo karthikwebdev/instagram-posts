@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper{
+    width: 600px;
+    height: 300px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper:active{
+    cursor: grab;
+}
+
+.icon,.icon::before,.icon::after{
+    width: 500px;
+    height: 60px;
+    background-color: #e22e45;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+}
+
+.icon::before,.icon::after{
+    content: "";
+    position: absolute;
+}
+
+.icon{
+    position: relative;
+}
+
+.icon::before{
+    top: -100px;
+}
+
+.icon::after{
+    bottom: -100px;
+}
+
+.icon-wrapper.active .icon{
+    background-color: rgba(0, 0, 0,0);
+    box-shadow:0 0 0 0 rgba(0, 0, 0,0);
+}
+
+.icon-wrapper.active .icon::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.icon-wrapper.active .icon::after{
+    transform: rotate(-135deg);
+    bottom: 0;
+}
