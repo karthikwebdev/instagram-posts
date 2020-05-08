@@ -1,0 +1,51 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana;
+    overflow: hidden;
+}
+
+/* selecting Element through Attribute  */
+[data-tooltip]{
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+[data-tooltip]::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    font-size: 1rem;
+    width: fit-content;
+    padding: 10px;
+    color: #EAF0F1;
+    background-color: #47535E;
+    transition: all 0.2s;
+    border-radius: 3px;
+    transform: scale(0) translate(-50%,-50%);
+}
+
+[data-tooltip]:hover::before{
+    transform: scale(1) translate(0%,-95%);
+}
+
+
+[data-tooltip]::after{
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0;
+    transition: 0.2s;
+    border-left: 5px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 10px solid #47535E;
+    transform: scale(0);
+}
+
+[data-tooltip]:hover::after{
+    transform: scale(1);
+    top: 0;
+}
