@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+h1{
+    text-align: center;
+    margin-top: 2em;
+    color: #DAE0E2;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #333945;
+}
+.carousel-wrapper{
+    display: flex;
+    width: 80vw;
+    margin:3em 10vw;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-wrapper .prev,.carousel-wrapper .next{
+    padding:0.4em 0.6em;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.carousel-wrapper .prev:active,.carousel-wrapper .next:active{
+    cursor: grabbing;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.carousel-wrapper .next{ right: 0; }
+img{
+    width:100%;
+    transition: 0.5s;
+    /* animation: slide 5s linear infinite;  */
+}
+@keyframes slide{
+    0% {transform: translateX(0%)}
+    18% {transform: translateX(0%)}
+    36% {transform: translateX(-100%)}
+    54% {transform: translateX(-100%)}
+    72% {transform: translateX(-200%)}
+    90% {transform: translateX(-200%)}
+    100% {transform: translateX(0%)}
+}
