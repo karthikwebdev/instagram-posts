@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+header,section{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header h1,section h2{
+    background-color: #B83227;
+    color: #fff;
+    padding: 15vw;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    border-radius: 10px;
+}
+section h2.left{ transform: translateX(-30vh); }
+section h2.right{ transform: translateX(30vh); }
+
+
+
+
+
+
+

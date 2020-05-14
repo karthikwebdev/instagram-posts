@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background-color:#D63031;
+    font-size: 5rem;
+    color: #fff;
+    padding: 20px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{ 
+    background-color:#2C3335 ;
+}
