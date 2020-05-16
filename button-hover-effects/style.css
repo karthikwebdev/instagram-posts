@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    background: transparent;
+    padding: 20px;
+    color: #333945;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #333945;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s;
+    box-shadow: 0 10px 0px #333945;
+    transform: translateY(-10px);
+}
+#btn::after{
+    content: "";
+    background-color: #333945;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    right: -30%;
+    bottom: -30%;
+    z-index: -1;
+    transition: all 0.4s;
+    border-radius: 50%;
+}
+#btn:hover::after{
+    top: -30%;
+    left: -30%;
+}
+#btn:hover{
+    color: #fff;
+    box-shadow: 0 0 0 #333945;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+

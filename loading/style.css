@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    font-family: monospace;
+}
+.loader{
+    width: 200px;
+    position: relative;
+    margin: 100px auto;
+}
+.loader::before,.loader::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    border: 20px solid #eee;
+    animation: rotate 1s ease-in-out infinite;
+}
+
+.loader::before{
+    border-top-color:#192A56;
+    z-index: 1;
+}
+@keyframes rotate{
+    to {transform: rotate(360deg);}
+}
