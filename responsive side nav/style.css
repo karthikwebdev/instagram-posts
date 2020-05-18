@@ -1,0 +1,46 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 50px;
+    background-color: #333333;
+    font-size: 1.5rem;
+    color: #fff;
+}
+nav span#hamburger{
+    position: absolute;
+    left: 1em;
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: transform 0.5s;
+    transform: rotate(180deg);
+}
+aside {
+    height:100vh;
+    background-color: #333;
+    width: 20vw;
+    text-align: center;
+    transition: transform 0.5s;
+}
+aside ul li{
+    list-style: none;
+    color: #fff;
+    padding: 1em 0.5em ;
+    cursor: pointer;
+    border-bottom: 1px solid #555;
+}
+aside ul li:hover{
+    text-decoration: underline;
+}
+aside.translate{
+    transform: translateX(-100%);
+}
+nav span#hamburger.rotate{
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
