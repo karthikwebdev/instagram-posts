@@ -1,0 +1,27 @@
+body{
+    font-family: Verdana;
+    background-color: #DAE0E2;
+}
+span#sun, span#moon{
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.container{
+    margin: 3em 10vw;
+    padding:2em;
+    text-align: justify;
+}
+body.dark{
+    background-color:#2C3335;
+    color: rgb(193, 222, 252);
+}
+.container img{ width: 100%; }
+.container h1{ text-align: center; }
+span#sun,body.dark span#moon{ left: 50%; }
+span#moon,body.dark span#sun{ left: -10%; }
+body.dark .container img{ filter: grayscale(70%); }
